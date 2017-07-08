@@ -18,7 +18,9 @@ import { ShappingCartComponent } from './restaurant-detail/shapping-cart/shappin
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { ShoppingCartService } from './restaurant-detail/shapping-cart/shopping-cart.service';
-import { OrderComponent } from './order/order.component'
+import { OrderComponent } from './order/order.component';
+import { InputComponent } from './shared/input/input.component';
+import { RadioComponent } from './shared/radio/radio.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { OrderComponent } from './order/order.component'
     ShappingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent
+    OrderComponent,
+    InputComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule,
