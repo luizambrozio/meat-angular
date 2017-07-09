@@ -20,7 +20,7 @@ export class RadioComponent implements OnInit, ControlValueAccessor {
 
   value: any
   onChange: any
-
+    
   constructor() { }
 
   ngOnInit() {
