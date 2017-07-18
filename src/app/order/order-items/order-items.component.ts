@@ -25,7 +25,8 @@ export class OrderItemsComponent implements OnInit {
   EmitDecreaseQty(item : CartItem){
     this.decreaseQty.emit(item)
   }
-  Emitremove(item : CartItem){
+
+  EmitRemove(item : CartItem){
     this.remove.emit(item)
   }
 }

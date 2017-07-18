@@ -1,3 +1,4 @@
+import { OrderService } from './order/order.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -47,7 +48,7 @@ import { OrderItemsComponent } from './order/order-items/order-items.component'
     FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [RestaurantsService, ShoppingCartService],
+  providers: [RestaurantsService, ShoppingCartService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
