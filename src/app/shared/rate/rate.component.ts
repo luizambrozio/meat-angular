@@ -22,7 +22,7 @@ export class RateComponent implements OnInit {
 
   setTemporaryRate(r : number){
     if(this.previusRate === undefined){
-      this.previusRate = r
+      this.previusRate = this.rate
     }
     this.rate = r
   }
