@@ -1,4 +1,5 @@
 
+import { Order, OrderItem } from './order.model'
 import { CartItem } from './../restaurant-detail/shapping-cart/cart-item.model';
 import { OrderService } from './order.service';
 import { Component, OnInit } from '@angular/core';
@@ -42,5 +43,15 @@ export class OrderComponent implements OnInit {
 
   remove(item : CartItem){
     this.orderService.remove(item)
+  }
+
+  checkOrder(order: Order){
+    order.orderItem = this.cartItems().map((item:CartItem)=> new OrderItem(item.quantity, item.menuItem.id))
+    this.orderService.checkOrder(order)
+      .subscribe((orderId: string) =>{
+        console.log(`Compra concluida ${orderId}`)
+        this.orderService.clear()
+    })
+
   }
 }
